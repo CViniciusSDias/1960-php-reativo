@@ -1,7 +1,7 @@
 <?php
 
 $streamList = [
-    'http',
+    fopen('http://localhost:8080/http-server.php', 'r'),
     fopen('arquivo.txt', 'r'),
     fopen('arquivo2.txt', 'r'),
 ];
@@ -24,4 +24,4 @@ do {
     }
 } while(!empty($streamList));
 
-echo "Li todos os arquivos" . PHP_EOL;
+echo "Li todos os streams" . PHP_EOL;
