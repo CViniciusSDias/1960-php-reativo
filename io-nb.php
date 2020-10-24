@@ -2,10 +2,11 @@
 
 $streamList = [
     stream_socket_client('tcp://localhost:8080'),
+    stream_socket_client('tcp://localhost:8001'),
     fopen('arquivo.txt', 'r'),
     fopen('arquivo2.txt', 'r'),
 ];
-fwrite($streamList[0], 'GET /http-server.php HTTP/1.1' . PHP_EOL . PHP_EOL);
+fwrite($streamList[0], 'GET /http-server.php HTTP/1.1' . "\r\n" . "\r\n");
 foreach ($streamList as $stream) {
     stream_set_blocking($stream, false);
 }
