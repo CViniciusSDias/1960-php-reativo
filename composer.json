@@ -3,6 +3,8 @@
         "guzzlehttp/guzzle": "^7.2",
         "react/event-loop": "^1.1",
         "react/stream": "^1.1",
-        "react/promise": "^2.8"
+        "react/promise": "^2.8",
+        "cboden/ratchet": "^0.4.3",
+        "ext-ds": "*"
     }
 }
